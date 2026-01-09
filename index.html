@@ -3,50 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Personal Webpage</title>
+    <title>Project Demos</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Main Heading -->
-    <h1>John Doe</h1>
+    <section class="container">
+      <h1>
+        Frontend Project-Based Learning <br />
+        <span>Roadmap</span> for <strong>Beginners</strong>
+      </h1>
+      <div class="cards-wrapper">
+        <!-- Roadmap SVG -->
+        <svg class="roadmap" viewBox="0 0 1200 900" preserveAspectRatio="none">
+          <path d="M100 160 C 400 60, 800 60, 1100 160" />
+          <path d="M100 420 C 400 320, 800 320, 1100 420" />
+          <path d="M300 700 C 600 600, 900 600, 1100 700" />
+        </svg>
+        <div class="cards">
+          <a href="./Project1/index.html" target="_blank"
+            ><div class="card rotate-left">
+              <span class="pin green"></span>
+              <span class="num">01</span>
+              <h3 class="text-black">HTML</h3>
+              <p>Create a Personal Webpage Using HTML Basics</p>
+            </div>
+          </a>
+          <a href="./Project2/index.html" target="_blank">
+            <div class="card rotate-right pink-bg">
+              <span class="pin pink"></span>
+              <span class="num">02</span>
+              <h3>HTML</h3>
+              <p>Build a Structured HTML Webpage</p>
+            </div></a
+          >
 
-    <hr />
+          <div class="card rotate-left">
+            <span class="pin blue"></span>
+            <span class="num">03</span>
+            <h3>Google AI Studio</h3>
+            <p>Boost research and streamline UX design.</p>
+          </div>
 
-    <!-- Paragraphs -->
-    <p>
-      Hello! My name is <strong>John Doe</strong>. I am learning
-      <em>HTML</em> and building my first webpage.
-    </p>
+          <div class="card rotate-right">
+            <span class="pin teal"></span>
+            <span class="num">04</span>
+            <h3>Gemini & ChatGPT</h3>
+            <p>Accelerate research, creativity, and workflows.</p>
+          </div>
 
-    <p>
-      HTML helps structure content on the web.<br />
-      It uses tags to display text, images, and links.
-    </p>
+          <div class="card rotate-left yellow-bg">
+            <span class="pin yellow"></span>
+            <span class="num">05</span>
+            <h3>Behance</h3>
+            <p>Showcase your portfolio and creativity.</p>
+          </div>
 
-    <!-- Link -->
-    <p>
-      Visit my favorite website:
-      <a href="https://www.google.com">Google</a>
-    </p>
+          <div class="card rotate-right">
+            <span class="pin blue"></span>
+            <span class="num">06</span>
+            <h3>Pexels</h3>
+            <p>Free royalty-free stock images.</p>
+          </div>
 
-    <!-- Image -->
-    <img src="images/johndoe.jpg" height="200px" alt="My Photo" />
+          <div class="card rotate-left pink-bg">
+            <span class="pin pink"></span>
+            <span class="num">07</span>
+            <h3>Notion</h3>
+            <p>Organize notes, tasks, and collaboration.</p>
+          </div>
 
-    <hr />
-
-    <!-- List -->
-    <h2>My Hobbies</h2>
-    <ul>
-      <li>Reading</li>
-      <li>Coding</li>
-      <li>Traveling</li>
-    </ul>
-
-    <!-- Bonus: Ordered List -->
-    <h2>Daily Routine</h2>
-    <ol>
-      <li>Wake up</li>
-      <li>Study</li>
-      <li>Practice HTML</li>
-    </ol>
+          <div class="card rotate-right">
+            <span class="pin green"></span>
+            <span class="num">08</span>
+            <h3>LinkedIn</h3>
+            <p>Highlight your expertise and portfolio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

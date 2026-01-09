@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Basics Assignment</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>My HTML Learning Page</h1>
+      <p>
+        This webpage was created using only HTML. It demonstrates text content,
+        links, lists, tables, multimedia, and a simple form.
+      </p>
+      <hr />
+    </header>
+
+    <main>
+      <!-- IMAGE -->
+      <section>
+        <h2>Image Section</h2>
+        <img
+          src="https://via.placeholder.com/400x200"
+          alt="Placeholder image"
+        />
+        <p><em>This image is added using the img tag.</em></p>
+        <hr />
+      </section>
+
+      <!-- LINKS -->
+      <section>
+        <h2>Useful Links</h2>
+        <ul>
+          <li><a href="https://www.google.com" target="_blank">Google</a></li>
+          <li>
+            <a href="https://www.wikipedia.org" target="_blank">Wikipedia</a>
+          </li>
+          <li><a href="https://www.github.com" target="_blank">GitHub</a></li>
+        </ul>
+        <hr />
+      </section>
+
+      <!-- LISTS -->
+      <section>
+        <h2>Lists</h2>
+
+        <h3>Unordered List (Skills)</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Web Design</li>
+        </ul>
+
+        <h3>Ordered List (Learning Steps)</h3>
+        <ol>
+          <li>Learn HTML basics</li>
+          <li>Practice with projects</li>
+          <li>Style with CSS</li>
+        </ol>
+        <hr />
+      </section>
+
+      <!-- TABLE -->
+      <section>
+        <h2>Student Scores Table</h2>
+
+        <table border="1" cellpadding="10">
+          <tr>
+            <th>Name</th>
+            <th>Score</th>
+          </tr>
+          <tr>
+            <td>Ada</td>
+            <td>85</td>
+          </tr>
+          <tr>
+            <td>John</td>
+            <td>92</td>
+          </tr>
+          <tr>
+            <td>Mary</td>
+            <td>78</td>
+          </tr>
+        </table>
+        <hr />
+      </section>
+
+      <!-- MULTIMEDIA -->
+      <section>
+        <h2>Multimedia</h2>
+
+        <h3>Audio</h3>
+        <audio controls>
+          <source src="sample-audio.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+
+        <h3>Video</h3>
+        <video controls width="400">
+          <source src="sample-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <p>
+          <em
+            >Audio and video elements include controls for user interaction.</em
+          >
+        </p>
+        <hr />
+      </section>
+
+      <!-- FORM -->
+      <section>
+        <h2>Contact Form</h2>
+
+        <form>
+          <p>
+            <label>
+              Name:<br />
+              <input type="text" placeholder="Enter your name" />
+            </label>
+          </p>
+
+          <p>
+            <label>
+              Email:<br />
+              <input type="email" placeholder="Enter your email" />
+            </label>
+          </p>
+
+          <p>
+            <label>
+              Message:<br />
+              <textarea
+                rows="4"
+                cols="40"
+                placeholder="Write your message"
+              ></textarea>
+            </label>
+          </p>
+
+          <p>
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <hr />
+      <p>&copy; 2026 | HTML Basics Assignment</p>
+    </footer>
+  </body>
+</html>

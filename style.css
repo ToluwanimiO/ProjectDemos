@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+  padding: 50px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+h1 span {
+  color: #2ecc71;
+}
+
+h1 strong {
+  color: #7d5fff;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-items: center;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  width: 260px;
+  padding: 30px 20px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Rotations */
+.rotate-left {
+  transform: rotate(-3deg);
+}
+
+.rotate-right {
+  transform: rotate(3deg);
+}
+
+/* Number */
+.num {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2ecc71;
+}
+
+/* Text */
+.card h3 {
+  margin: 15px 0 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Pins */
+.pin {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pin::after {
+  content: "";
+  width: 2px;
+  height: 20px;
+  background: #999;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Pin Colors */
+.green {
+  background: #2ecc71;
+}
+.pink {
+  background: #ff6b81;
+}
+.blue {
+  background: #3498db;
+}
+.teal {
+  background: #1abc9c;
+}
+.yellow {
+  background: #feca57;
+}
+
+/* Card Accent Backgrounds */
+.pink-bg {
+  background: #ffeef2;
+}
+
+.yellow-bg {
+  background: #fff8e1;
+}
+
+/* Bottom row layout */
+.cards div:nth-last-child(-n + 2) {
+  grid-column: span 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cards-wrapper {
+  position: relative;
+}
+.roadmap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none; /* allows clicking cards */
+}
+
+.roadmap path {
+  fill: none;
+  stroke: #242525;
+  stroke-width: 2;
+  stroke-dasharray: 4 8;
+  opacity: 0.8;
+
+  /* animation */
+  stroke-dashoffset: 1200;
+  animation: drawRoadmap 3s ease forwards;
+}
+
+@keyframes drawRoadmap {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.cards {
+  position: relative;
+  z-index: 2;
+}
+.roadmap path:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.roadmap path:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.roadmap path:nth-child(3) {
+  animation-delay: 1.2s;
+}
+a{
+    text-decoration: none;
+}
+.text-black{
+    color: black;
+}
