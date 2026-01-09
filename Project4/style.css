@@ -1,0 +1,142 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ROOT UNITS */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background: hsl(210, 30%, 96%);
+  color: #333;
+}
+
+/* FIXED NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #111827;
+  color: white;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+/* INTRO */
+.intro {
+  margin-top: 80px;
+  padding: 4vh 10vw;
+  text-align: center;
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* FLEXBOX */
+.flex-section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 10vw;
+}
+
+.flex-card {
+  background: white;
+  padding: 2rem;
+  width: 200px;
+  text-align: center;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.flex-card:hover {
+  transform: translateY(-10px);
+}
+
+/* GRID */
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 4rem 10vw;
+}
+
+.grid-card {
+  background: rgba(59, 130, 246, 0.15);
+  height: 140px;
+  border-radius: 16px;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* POSITIONING */
+.position-demo {
+  padding: 4rem 10vw;
+}
+
+.relative-box {
+  position: relative;
+  background: white;
+  padding: 3rem;
+  width: 300px;
+  border-radius: 12px;
+}
+
+.absolute-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #ef4444;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: #111827;
+  color: white;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .flex-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid-section {
+    grid-template-columns: 1fr;
+  }
+
+  .intro h2 {
+    font-size: 2rem;
+  }
+}

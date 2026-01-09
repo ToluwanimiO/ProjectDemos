@@ -21,6 +21,9 @@ h1 {
   font-size: 36px;
   margin-bottom: 50px;
 }
+.mb0 {
+  margin-bottom: 0;
+}
 
 h1 span {
   color: #2ecc71;
@@ -188,9 +191,10 @@ h1 strong {
 .roadmap path:nth-child(3) {
   animation-delay: 1.2s;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
+  color: black;
 }
-.text-black{
-    color: black;
+.text-black {
+  color: black;
 }
