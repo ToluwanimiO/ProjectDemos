@@ -1,0 +1,27 @@
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  nav a {
+    margin: 0.5rem 0;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+/* Smooth page fade-in */
+body {
+  animation: pageFade 0.8s ease;
+}
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

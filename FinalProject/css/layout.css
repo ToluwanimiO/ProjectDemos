@@ -1,0 +1,16 @@
+#hero {
+  text-align: center;
+  padding: 3rem;
+  background: linear-gradient(120deg, #a0eaf0, #f0a0e0);
+}
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  justify-items: center;
+}
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

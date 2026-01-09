@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Beginner Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      #title {
+        margin-bottom: 1rem;
+      }
+      .highlight {
+        background-color: yellow;
+        color: red;
+        padding: 5px;
+      }
+      button {
+        padding: 0.5rem 1rem;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">Welcome!</h1>
+    <p class="info">This is your first interactive page.</p>
+    <button id="changeTextBtn">Change Text</button>
+
+    <script>
+      // ======= Variables & Data Types =======
+      let name = "Tolu"; // string
+      let age = 22; // number
+      let isStudent = true; // boolean
+      let hobbies = ["Reading", "Coding", "Drawing"]; // array
+      let person = { name: "Tolu", age: 22 }; // object
+      let unknown = null; // null
+      let notDefined; // undefined
+
+      console.log("Variables & Data Types:");
+      console.log(name, age, isStudent, hobbies, person, unknown, notDefined);
+
+      // ======= Functions =======
+      function greet(userName) {
+        console.log("Hello " + userName + "!");
+      }
+
+      greet("Tolu"); // example call
+      let userInput = prompt("Enter your name:");
+      greet(userInput);
+
+      // ======= DOM Manipulation =======
+      const title = document.getElementById("title"); // By ID
+      const infoParagraphs = document.getElementsByClassName("info"); // By class
+      const button = document.querySelector("#changeTextBtn"); // By query selector
+
+      // Change content
+      title.textContent = "Hello, JavaScript!";
+      infoParagraphs[0].innerHTML =
+        "<strong>This paragraph is bold now!</strong>";
+
+      // Change styles
+      title.style.color = "orange";
+      title.style.backgroundColor = "#f0f0f0";
+      title.style.fontSize = "30px";
+
+      // Events
+      button.addEventListener("click", function () {
+        title.textContent = "You clicked the button!";
+        title.style.color = "green";
+        button.textContent = "Clicked!";
+        title.classList.toggle("highlight");
+      });
+
+      // Add & Remove elements dynamically
+      const newPara = document.createElement("p");
+      newPara.textContent = "This paragraph was added with JS!";
+      document.body.appendChild(newPara);
+
+      setTimeout(function () {
+        newPara.remove();
+      }, 5000);
+
+      // Traversing DOM example
+      console.log("Parent of title:", title.parentNode);
+      console.log("Next element after title:", title.nextElementSibling);
+    </script>
+  </body>
+</html>

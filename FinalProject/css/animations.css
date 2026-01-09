@@ -1,0 +1,27 @@
+#hero {
+  animation: fadeIn 1.5s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.card {
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.card.flipped {
+  background: #3498db;
+  color: #fff;
+}

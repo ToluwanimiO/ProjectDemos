@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Conditionals & Loops Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      h1 {
+        color: #2c3e50;
+      }
+      .output {
+        margin-top: 1rem;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background: #f9f9f9;
+      }
+      ul {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Conditionals & Loops Demo</h1>
+
+    <div class="output" id="userAgeResult"></div>
+    <div class="output" id="numberListResult"></div>
+    <div class="output" id="agesArrayResult"></div>
+
+    <script>
+      // ======= Part 1: Conditionals =======
+      let userAge = prompt("Enter your age:");
+      userAge = Number(userAge); // convert to number
+
+      const userAgeResult = document.getElementById("userAgeResult");
+
+      if (userAge >= 60) {
+        console.log("You are a senior citizen!");
+        userAgeResult.textContent = "You are a senior citizen!";
+      } else if (userAge >= 18) {
+        console.log("You are an adult!");
+        userAgeResult.textContent = "You are an adult!";
+      } else {
+        console.log("You are a minor!");
+        userAgeResult.textContent = "You are a minor!";
+      }
+
+      // ======= Part 2: Loops =======
+      const numberListResult = document.getElementById("numberListResult");
+
+      const ulNumbers = document.createElement("ul");
+      for (let i = 1; i <= 5; i++) {
+        console.log("Number: " + i);
+        const li = document.createElement("li");
+        li.textContent = "Number: " + i;
+        ulNumbers.appendChild(li);
+      }
+      numberListResult.appendChild(ulNumbers);
+
+      // ======= Part 3: Loop + Conditionals =======
+      const ages = [12, 25, 17, 60, 33];
+      const agesArrayResult = document.getElementById("agesArrayResult");
+
+      const ulAges = document.createElement("ul");
+
+      for (let i = 0; i < ages.length; i++) {
+        let age = ages[i];
+        let message = "";
+
+        if (age >= 60) {
+          message = age + " - Senior citizen";
+        } else if (age >= 18) {
+          message = age + " - Adult";
+        } else {
+          message = age + " - Minor";
+        }
+
+        console.log(message);
+        const li = document.createElement("li");
+        li.textContent = message;
+        ulAges.appendChild(li);
+      }
+
+      agesArrayResult.appendChild(ulAges);
+    </script>
+  </body>
+</html>
